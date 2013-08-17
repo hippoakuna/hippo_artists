@@ -1,0 +1,2 @@
+module GlobalPagesHelper
+end
