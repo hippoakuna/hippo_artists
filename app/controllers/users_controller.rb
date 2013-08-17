@@ -4,7 +4,11 @@ class UsersController < ApplicationController
   before_action :admin_user,     only: :destroy
 
   def new
-  	@user = User.new
+  	@user = User.new	
+  	# Below is Exercise answer (could be incorrect)
+  	if signed_in?
+  	  redirect_to(root_url)
+  	end
   end
 
   def index
@@ -24,6 +28,10 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+    # Below is Exercise answer (could be incorrect)
+  	if signed_in?
+  	  redirect_to(root_url)
+  	end
   end
 
   def edit
@@ -52,13 +60,6 @@ class UsersController < ApplicationController
   end
 
   # Before filters
-
-  def signed_in_user
-  	unless signed_in?
-  	  store_location
-      redirect_to signin_url, notice: "Please sign in."
-    end
-  end
 
   def correct_user
   	@user = User.find(params[:id])
