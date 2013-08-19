@@ -1,3 +1,53 @@
+<%= stylesheet_link_tag 'pages/welcome' %>
+<%= stylesheet_link_tag 'font/entypo' %>
+
+  <!-- Twitter Widget -->
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  </script>
+
+  <!-- Share -->
+  <script>
+    (function($){
+      $.fn.styleddropdown = function(){
+        return this.each(function(){
+          obj = $(this)
+          obj.find('.share').click(function() { //onclick event, 'list' fadein
+          obj.find('.list').fadeIn(400);
+          
+          $(document).keyup(function(event) { //keypress event, fadeout on 'escape'
+            if(event.keyCode == 27) {
+            obj.find('.list').fadeOut(400);
+            }
+          });
+          
+          obj.find('.list').hover(function(){ },
+            function(){
+              $(this).fadeOut(400);
+            });
+          });
+          
+          obj.find('.list li').click(function() { //onclick event, change field value with selected 'list' item and fadeout 'list'
+          obj.find('.share')
+            .val($(this).html())
+            .css({
+              'background':'#fff',
+              'color':'#333'
+            });
+          obj.find('.list').fadeOut(400);
+          });
+        });
+      };
+    })(jQuery);
+  
+    $(function(){
+      $('.avatar').styleddropdown();
+    });
+  </script>
+
+<!-- 
+....................................................................
+-->
+
 <% provide(:title, @user.name) %>
 <div class="row">
   <aside class="span4">

@@ -5,10 +5,10 @@ class UsersController < ApplicationController
 
   def new
   	@user = User.new	
-  	# Below is Exercise answer (could be incorrect)
-  	if signed_in?
-  	  redirect_to(root_url)
-  	end
+  	# Below is Exercise answer (IS incorrect)
+  	#if signed_in?
+  	#  redirect_to(root_url)
+  	#end
   end
 
   def index
@@ -28,10 +28,10 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
-    # Below is Exercise answer (could be incorrect)
-  	if signed_in?
-  	  redirect_to(root_url)
-  	end
+    # Below is Exercise answer (IS incorrect)
+  	#if signed_in?
+  	#  redirect_to(root_url)
+  	#end
   end
 
   def edit

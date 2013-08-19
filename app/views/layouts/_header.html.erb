@@ -1,0 +1,54 @@
+  <div id="header">
+    
+    <ul> 
+      <li><%= link_to image_tag("main/main/hippo-logo-greentext.png",width:'100', class: "hippo-logo"), root_path %></li>
+      <ul id="right">    
+        <% if signed_in? %>
+          <li>
+            <button type="button" name="signup" value="text" class="signup"><%= link_to "Logout", signout_path, method: "delete" %></button>
+          </li>
+        <% else %>
+          <li>
+            <button type="button" name="signup" value="text" class="signup"><%= link_to "Join", signup_path %></button>
+          </li>
+        <% end %>
+      </ul>   
+      <span class="search"><input type="text" name="search" placeholder="Search  Artists"></span>       
+    </ul>    
+  
+  </div>
+
+
+
+      <!--ul id="right">    
+        <li style="margin-right:75px"><a href="https://www.facebook.com/hippoartists?ref=ts&fref=ts" target="_blank"><button type="button" value="text" class="linkaway"><i class="icon-facebook"></i></button></a></li>
+
+        <li style="margin-right:35px"><a href='#demo_inline_element' 
+           class='lightview'
+           data-lightview-options="skin: 'dark', controls: { type: 'relative', slider: false, close: 'false' }">
+          <button type="button" value="text" class="linkaway"><i class="icon-info"></i></button>
+          </a>
+    
+          <div id='demo_inline_element' style='display:none'>
+            <div class='movie-container side'>
+              <%= image_tag "main/banners/hpb.png",width:'640'%>
+            </div>
+          
+            <div class='description-container side'>
+              <h3><span style="font-family:'colaborate-thin'">Welcome to Hippo</span><br><span style="font-size:12px"><a href="https://twitter.com/HippoArtists" target="_blank">@hippoartists</a></span></h3>
+              <p><br>
+                
+                We're working on turning Hippo into a social network open to all artists.
+                <br><br>
+                Currently, we function as a production company and a platform to share art and creative projects. 
+                <br><br>
+                Featured Artists: <%= link_to "Akuna", "#" %>, <%= link_to "Me Like Bees", "#" %> 
+                <br><br><br>
+                <span style="font-size:10px">&copy; 2013 Hippo, LLC. All rights reserved.</span>
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <li><button type="button" value="text" class="linkaway"><i class="icon-envelope"></i></button></li>
+      </ul--> 

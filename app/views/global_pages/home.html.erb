@@ -1,8 +1,98 @@
-<h1>GlobalPages#home</h1>
-<p>Find me in app/views/global_pages/home.html.erb</p>
+<% provide(:title, 'Artists - Create a free account and share your creations') %>
+<%= stylesheet_link_tag 'pages/welcome' %>
+<%= stylesheet_link_tag 'js/lightview/lightview' %>
+<%= stylesheet_link_tag 'js/lightview/demo_inline' %>
+<%= stylesheet_link_tag 'js/fwslider/component' %>
+<%= javascript_include_tag "fwslider/modernizr.custom" %>
+<%= javascript_include_tag "fwslider/jquery.cbpFWSlider.min" %>
+<%= javascript_include_tag "slidesjs/jquery.slides.min" %>
+
+<!-- FWSlider -->
+<script>
+  $( function() {
+    $( '#cbp-fwslider' ).cbpFWSlider();
+  } );
+</script>
+
+<!-- 
+.....................................................................
+-->
+
+<h2 id="artist-title"><%= image_tag "main/main/top-line.png", class: "headshad" %></h2>
+
+<!-- Main Features
+.....................................................................
+-->
+
+<section id="feature">
+  <div class="clearfix">
+      <div id="cbp-fwslider" class="cbp-fwslider">
+        <ul>  
+          <li><%= link_to image_tag("main/banners/aabnrblk.png"), "#" %>
+            <p>
+              <strong>Akuna</strong>
+              <br><span><i class="icon-certificate"></i> musician</span><span style="margin-left: 10px;"><i class="icon-certificate"></i> designer</span>
+            </p>
+          </li>
+          <li><%= link_to image_tag("main/banners/mlb.jpg"), "#" %>
+            <p>
+              <strong>Me Like Bees</strong>
+              <br><span><i class="icon-certificate"></i> musician</span>                       
+            </p>
+          </li>                            
+        </ul>
+      </div>   
+  </div>
+</section><div class='clear'>&nbsp;</div>
 
 
-<% if signed_in? %>
-  <%= render 'shared/user_info' %>
-  <%= render 'shared/stats' %>
-<% else %>
+<!-- Sub Features
+.....................................................................
+-->
+
+
+
+<section id="content">
+  <section id="box3" class="grid_7">
+    <!--span class="boxtop"><%= image_tag "main/etc/vimeo.png" %></span-->
+    
+    <div class="form-5" style="margin-top:50px;">    
+      <%= form_for(:session, url: sessions_path) do |f| %>
+        <p>
+        <%= f.text_field :email, placeholder: "email", name: "top" %>
+        <%= f.password_field :password, placeholder: "password", name: "up" %>  
+        </p>
+        <%= f.submit "Sign in", class: "welc-in" %>
+      <% end %>
+    </div>
+
+    <p style="margin: 7px 0 0 85px;font-size:12px">New user? <%= link_to "Sign up now!", signup_path %></p>
+
+  </section>
+  <section id="box2" class="grid_7">
+    <%= image_tag "http://lh5.ggpht.com/-13qpvw5uBa0/T28hrIHxy7I/AAAAAAAAHcM/4I8vwSx73xM/image_thumb5.png?imgmax=800", class: "videoplace" %>
+    <%= link_to image_tag("main/etc/play2.png",:size => "70x70",:class => "playbutton"), "#" %>    
+  </section>
+</section>
+
+
+<footer>
+  &copy; 2013 Hippo, LLC. All rights reserved. 
+  <a href="#">Legal</a> | 
+  <a href="#">About</a> | 
+  <a href="#">Contact</a> 
+  <%= link_to "View Profile", current_user %> | 
+  <%= link_to "Account", edit_user_path(current_user) %> | 
+  <%= link_to "All Users", users_path %> 
+</footer>
+
+<!-- SlidesJS  -->
+<script>
+  $(function() {
+    $('#slides').slidesjs({
+      width: 960,
+      height: 310,        
+      navigation: false
+    });
+  });
+</script>  

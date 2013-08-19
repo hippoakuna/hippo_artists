@@ -1,13 +1,404 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
  *= require_self
- *= require_tree .
+ *= require base/grid960
+ *= require font/font-awesome
+ *= require js/hoverjs/jquery.hoverscroll
+ *= require js/lightview/lightview
+ *= require js/lightview/demo_inline
  */
+
+
+/* Basic
+-------------------------------------------------------------------------------------*/
+
+/*html { height: 100%; }*/
+body { 
+  margin:0; padding:0; /*height: 100%;*/ 
+  font: normal 100% 'Helvetica Neue', Helvetica, Arial, sans-serif;  
+  background: url(main/main/background-texture.jpg) top repeat;
+}
+#header {
+  background: rgb(247,247,247);
+  background: -moz-linear-gradient(top,  rgba(247,247,247,1) 0%, rgba(246,246,246,1) 47%, rgba(242,242,242,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(247,247,247,1)), color-stop(47%,rgba(246,246,246,1)), color-stop(100%,rgba(242,242,242,1)));
+  background: -webkit-linear-gradient(top,  rgba(247,247,247,1) 0%,rgba(246,246,246,1) 47%,rgba(242,242,242,1) 100%);
+  background: -o-linear-gradient(top,  rgba(247,247,247,1) 0%,rgba(246,246,246,1) 47%,rgba(242,242,242,1) 100%);
+  background: -ms-linear-gradient(top,  rgba(247,247,247,1) 0%,rgba(246,246,246,1) 47%,rgba(242,242,242,1) 100%);
+  background: linear-gradient(to bottom,  rgba(247,247,247,1) 0%,rgba(246,246,246,1) 47%,rgba(242,242,242,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f2f2f2',GradientType=0 );
+  border-bottom: 1px solid rgba(150,150,150,.2);
+  position:fixed;
+  top: 0; left: 0;
+  z-index: 2;
+  width:100%;
+  height: 3em;
+} 
+a:link {color: #0084b4; text-decoration: none;}  
+a:visited {color: #0084b4; text-decoration: none;} 
+a:hover {color: #1794B3; text-decoration: underline;}     
+a:active {color: rgba(1,1,1,1); text-decoration: none;} 
+
+/* Screen Fix
+-------------------------------------------------------------------------------------*/
+
+ @media screen{
+  body>div#left-sidebar{
+   position:fixed;
+  }
+  body>div#header{
+   position:fixed;
+  }  
+  body>div#footer{
+   position:fixed;
+  }
+ }
+ * html body{
+  overflow:hidden; 
+ } 
+ * html #content{
+  overflow:auto;
+ }
+ * html #main {
+  overflow: auto;
+ }
+
+/* Images
+-------------------------------------------------------------------------------------*/
+
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
+/* Header
+-------------------------------------------------------------------------------------*/
+
+#header ul {
+  width: 953px; 
+  margin: auto;
+  list-style: none;
+  padding: 0;
+}
+#header li img.hippo-logo {  
+  opacity: 1;
+  margin: 11px 0 0 -7px; padding: 0;
+}
+
+/* Header Shadow
+-------------------------------------------------------------------------------------*/
+
+img.headshad {
+  width: 882px;
+  position: absolute; top: -5px; left: 35px; /* top -4 */
+}
+img.topfloat {
+  width: 899px; 
+  position: absolute; top: 71px; left: 70px; /* top 71 */
+}
+
+/* #Header #Right
+-------------------------------------------------------------------------------------*/
+
+#right a:link { opacity: 1; }
+#right a:hover { opacity: 1; }
+#right li {
+  float: right;
+  margin: -33px -5px 0;
+}
+
+button.linkaway {
+  height: 32px; width: 33px; color: #555; font-size: 10px;
+  -webkit-text-shadow:1px 1px 1px rgba(255,255,255, 1);
+  text-shadow:1px 1px 1px rgba(255,255,255, 1);
+  border: 1px solid rgba(220,220,220,.7);
+  background: none;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px; 
+}
+button.linkaway:hover {
+  border: 1px solid rgba(220,220,220,.7);
+  cursor: pointer;
+  background: -moz-linear-gradient(
+    top,
+    #ffffff 0%,
+    #dedede);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#ffffff),
+    to(#dedede));
+  -moz-box-shadow:
+    0px 1px 1px rgba(143,143,143,0.5),
+    inset 0px 0px 14px rgba(227,227,227,1);
+  -webkit-box-shadow:
+    0px 1px 1px rgba(143,143,143,0.5),
+    inset 0px 0px 14px rgba(227,227,227,1);
+  box-shadow:
+    0px 1px 1px rgba(143,143,143,0.5),
+    inset 0px 0px 14px rgba(227,227,227,1);
+  text-shadow:
+    0px 0px 0px rgba(000,000,000,0),
+    0px 2px 0px rgba(255,255,255,1); 
+}
+
+/* #Header #Right Search
+-------------------------------------------------------------------------------------*/
+
+.search {
+  position: relative; bottom: 33px; left: 670px;
+}
+.search input[type="text"]{ 
+    width:200px; height:30px;
+    padding:0 14px 0 14px;    
+    outline:none;
+    text-indent:1px; line-height:18px; color:#444; 
+    -webkit-text-shadow:1px 1px 1px rgba(0,0,0,0.05);
+    text-shadow:1px 1px 1px rgba(0,0,0,0.05);
+
+    background: rgb(247,247,247);
+    background: -moz-linear-gradient(top,  rgba(247,247,247,1) 0%, rgba(246,246,246,1) 47%, rgba(242,242,242,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(247,247,247,1)), color-stop(47%,rgba(246,246,246,1)), color-stop(100%,rgba(242,242,242,1)));
+    background: -webkit-linear-gradient(top,  rgba(247,247,247,1) 0%,rgba(246,246,246,1) 47%,rgba(242,242,242,1) 100%);
+    background: -o-linear-gradient(top,  rgba(247,247,247,1) 0%,rgba(246,246,246,1) 47%,rgba(242,242,242,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(247,247,247,1) 0%,rgba(246,246,246,1) 47%,rgba(242,242,242,1) 100%);
+    background: linear-gradient(to bottom,  rgba(247,247,247,1) 0%,rgba(246,246,246,1) 47%,rgba(242,242,242,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f2f2f2',GradientType=0 );
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;    
+    
+    box-shadow: 0 1px 1px rgba(0,0,0,.2) inset, 0 1px 0 rgba(255,255,255,.2);
+    border: 1px solid #d9d9d9;
+}  
+.search ::-webkit-input-placeholder { color: #666; font-family: 'lato'; }
+.search :-moz-placeholder { color: #666; font-family: 'lato'; }
+.search ::-moz-placeholder { color: #666; font-family: 'lato'; }
+.search :-ms-input-placeholder { color: #666; font-family: 'lato'; }
+
+
+button a:link, button a:visited, button a:hover, button a:active {
+  color: rgba(1,1,1,.8); text-decoration: none;
+}  
+
+
+
+/* LG Sidebar
+-------------------------------------------------------------------------------------*/
+
+#left-sidebar {
+  background: url(main/main/Linen-iPhone-2.png) top repeat;
+  margin: 0; padding: 0; margin-top: 0em;
+  position: fixed;
+  width: 4.4em;
+  height:100%;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+#left-sidebar ul.lg-icons li {
+  color: #999; font-size: 12px; text-align: center;
+  width: 5.86em; height: 6.3em; 
+  margin-left: -40px; 
+  list-style: none; 
+  border-bottom: 1px solid #333;
+  padding-bottom: .25em;
+}
+#left-sidebar ul.lg-icons:first-child {
+  margin-top: 0;
+}
+#left-sidebar ul.lg-icons li img {
+  opacity: .5;
+  width: 35px; height: 35px;
+  padding: .9em 6px 0 6px;
+}
+#left-sidebar ul.lg-icons li:hover img {
+  opacity: .8;
+}
+#left-sidebar ul.lg-icons li:hover {
+  background: rgba(1,1,1,.2); 
+  color: rgba(255,255,255,.8); 
+  text-decoration: none;  
+}
+
+/* LG Sidebar PODS
+-------------------------------------------------------------------------------------*/
+
+  #left-sidebar ul.lg-icons li:first-child {
+    -webkit-border-top-left-radius: 5px; 
+    -moz-border-top-left-radius: 5px; 
+    border-top-left-radius: 5px; 
+  }
+
+/* Other
+-------------------------------------------------------------------------------------*/
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+div.clear {
+  position: absolute; top: 66px; right: 265px;
+  background: rgba(255,255,255,.5);
+  height: 444px; width: 290px;
+}
+
+/* Artist Pages
+-------------------------------------------------------------------------------------*/
+
+h1#artist-title {
+  z-index: 1; width:100%; padding: 26px 0px 26px 0; 
+  position: fixed; top: 34px; letter-spacing: 1px;
+  font: 23px 'colaborate-thin'; 
+  background: url(main/main/background-texture.jpg);
+}
+h1#artist-title span {
+  letter-spacing: normal;
+  text-transform: uppercase;
+  vertical-align: 18%;
+  margin-left: 20px;
+  background: #c9c9c9; padding: 5px; 
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font: bold 11px 'Helvetica Neue';
+  color: rgba(255,255,255,.9);
+}
+/* 2.7 // 86 / 183 / 293 / 169 */
+  h1#artist-title span .notch2 {
+    position: absolute;
+    top: 2.63em; 
+    left: 145px;
+    margin: 0; padding: 0;
+    width: 0; height: 0;
+    border-right: 10px solid #c9c9c9;
+    border-bottom: 10px solid transparent; 
+    border-top: 10px solid transparent;  
+  }
+
+  h1#artist-title span .notch {
+    position: absolute;
+    top: 2.63em; 
+    left: 78px;
+    margin: 0; padding: 0;
+    width: 0; height: 0;
+    border-right: 10px solid #c9c9c9;
+    border-bottom: 10px solid transparent; 
+    border-top: 10px solid transparent;   
+  }
+  h1#artist-title span .notches {
+    position: absolute;
+    top: 2.63em; 
+    left: 175px;
+    margin: 0; padding: 0;
+    width: 0; height: 0;
+    border-right: 10px solid #c9c9c9;
+    border-bottom: 10px solid transparent; 
+    border-top: 10px solid transparent;   
+  }
+  h1#artist-title span .notched {
+    position: absolute;
+    top: 2.63em; 
+    left: 285px; /* 293 */
+    margin: 0; padding: 0;
+    width: 0; height: 0;
+    border-right: 10px solid #c9c9c9;
+    border-bottom: 10px solid transparent; 
+    border-top: 10px solid transparent;   
+  }
+  h1#artist-title span .notchmlb {
+    position: absolute;
+    top: 2.63em; 
+    left: 147px;
+    margin: 0; padding: 0;
+    width: 0; height: 0;
+    border-right: 10px solid #c9c9c9;
+    border-bottom: 10px solid transparent; 
+    border-top: 10px solid transparent;   
+  }
+
+h1#artist-title a:link {color: rgba(1,1,1,1); text-decoration: none;}  
+h1#artist-title a:visited {color: rgba(1,1,1,1); text-decoration: none;} 
+h1#artist-title a:hover {color: #1794B3; text-decoration: none;}     
+h1#artist-title a:active {color: rgba(1,1,1,1); text-decoration: none;} 
+
+.cbp-fwslider li span {
+  letter-spacing: normal;
+  text-transform: uppercase;
+  vertical-align: 30%;
+  background: #000; padding: 5px; 
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font: bold 10px 'Helvetica Neue';
+  color: rgba(255,255,255,.9);
+}
+
+/* Wookmark Plugin
+-------------------------------------------------------------------------------------*/
+
+.clearfix {
+height: 100%;
+position: relative; 
+margin: 0;
+}
+.view ali:nth-child(3n) {
+height: 175px;
+}
+.view ali:nth-child(4n-3) {
+padding-bottom: 30px;
+}
+.view ali:nth-child(5n) {
+height: 250px;
+}
+
+
+
+
+
+
+
+button.signup {
+  height: 32px; width: 53px; color: #555; font-size: 10px;
+  -webkit-text-shadow:1px 1px 1px rgba(255,255,255, 1);
+  text-shadow:1px 1px 1px rgba(255,255,255, 1);
+  border: 1px solid #d9d9d9;
+  background: 
+    -webkit-linear-gradient(top, #F8F8F8, #EEE);
+  background: 
+    -moz-linear-gradient(top, #F8F8F8, #EEE);
+  background: 
+    -o-linear-gradient(top, #F8F8F8, #EEE);
+  background: 
+    linear-gradient(top, #F8F8F8, #EEE);    
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;    
+}
+button.signup:hover {
+  cursor: pointer;
+  background: -moz-linear-gradient(
+    top,
+    #ffffff 0%,
+    #dedede);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#ffffff),
+    to(#dedede));
+  -moz-box-shadow:
+    0px 1px 1px rgba(143,143,143,0.5),
+    inset 0px 0px 14px rgba(227,227,227,1);
+  -webkit-box-shadow:
+    0px 1px 1px rgba(143,143,143,0.5),
+    inset 0px 0px 14px rgba(227,227,227,1);
+  box-shadow:
+    0px 1px 1px rgba(143,143,143,0.5),
+    inset 0px 0px 14px rgba(227,227,227,1);
+  text-shadow:
+    0px 0px 0px rgba(000,000,000,0),
+    0px 2px 0px rgba(255,255,255,1);
+}
+
+

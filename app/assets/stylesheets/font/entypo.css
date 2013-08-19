@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'entypo';
+    src: url('entypo/entypo.eot');
+    src: url('entypo/entypo.eot?#iefix') format('embedded-opentype'),
+         url('entypo/entypo.woff') format('woff'),
+         url('entypo/entypo.ttf') format('truetype'),
+         url('entypo/entypo.svg#entypo') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'entypo-social';
+    src: url('entypo/entypo-social.eot');
+    src: url('entypo/entypo-social.eot?#iefix') format('embedded-opentype'),
+         url('entypo/entypo-social.woff') format('woff'),
+         url('entypo/entypo-social.ttf') format('truetype'),
+         url('entypo/entypo-social.svg#entypo-social') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face 	{
+    font-family: 'entypo-logo';
+    src: 	url('entypo/entypo-logo-webfont.eot');
+    src: 	url('entypo/entypo-logo-webfont.eot?#iefix') format('embedded-opentype'),
+         	url('entypo/entypo-logo-webfont.woff') format('woff'),
+         	url('entypo/entypo-logo-webfont.ttf') format('truetype'),
+         	url('entypo/entypo-logo-webfont.svg#entypo-logo') format('svg');
+   font-weight: normal;
+   font-style: normal;
+
+}
+
+
+
+ul.list li {
+	font-family: "entypo-social", "entypo";
+	font-size: 40px;
+}
+ul.list li span {
+	font-family: "lato";
+	font-size: 20px;
+	text-transform: lowercase;
+	margin-bottom: 2px;
+}
+.title h5 {
+	font-family: "lato", "entypo";
+}
+.title h5 span {
+	font-size: 29px;
+}

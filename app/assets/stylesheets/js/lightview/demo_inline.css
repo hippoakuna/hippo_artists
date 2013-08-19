@@ -1,0 +1,158 @@
+#demo_inline_element {
+  float: left;
+  position: relative;
+  /*width: 700px;*/
+  width: 900px;
+  background: #141414;
+  /*background: url(public/images/main/linen-iphone-2.png) repeat;*/
+  color: #fefefe;
+}
+
+#demo_inline_element .side { float: left; }
+#demo_inline_element .movie-container {
+ width: 640px;
+ height: 360px;
+ margin-right: 10px;
+/* width: 400px;
+ height: 600px;*/
+/* margin-right: 30px;*/
+ overflow: hidden;
+}
+
+
+#demo_inline_element .description-container {
+ width: 249px;
+ height: 360px;
+ position: relative;
+}
+
+#demo_inline_element .description-container h1 {
+ font: normal 35px 'lane - narrow'; opacity: .6;
+ /*font: normal 19px/23px "HelveticaNeue","Helvetica Neue","HelveticaNeueRoman","HelveticaNeue-Roman","Helvetica Neue Roman",Helvetica,Arial,sans-serif,Verdana;
+ */text-transform: uppercase;
+ margin-top: 10px;
+ margin-bottom: 0;
+}
+#demo_inline_element .description-container h4 {
+ font: normal 11px/18px "HelveticaNeue","Helvetica Neue","HelveticaNeueRoman","HelveticaNeue-Roman","Helvetica Neue Roman",Helvetica,Arial,sans-serif,Verdana;
+ text-transform: uppercase;
+ color: #666;
+ position: relative; bottom: 0;
+}
+
+#demo_inline_element .description-container p {
+  font: normal 16px 'lato';
+}
+
+#demo_inline_element .tagContainer {
+ float: left;
+ width: 100%;
+ clear: both;
+}
+#demo_inline_element .tagContainer .tag, 
+#demo_inline_element .tagContainer .tag:hover {
+    background-color: #080808;
+    background-image: url("/images/lightview/demonstrations/inline/tag_background.gif");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #808080;
+    float: left;
+    line-height: 15px;
+    margin: 0 6px 5px 0px;
+    font-size: 8px;
+    text-transform: uppercase;
+    padding: 3px 19px 3px 5px;
+    text-decoration: none;
+    cursor: default;
+}
+
+#demo_inline_element .full {
+  float: right;
+  clear: both;
+  background: url("/images/lightview/demonstrations/inline/full_background.gif") right center no-repeat;
+  color: #808080;
+  height: 24px;
+  line-height: 24px;
+  padding: 3px 20px 3px 5px;
+  margin-bottom: 18px;
+}
+
+
+
+
+
+
+/*** ORIGINAL
+
+
+
+#demo_inline_element {
+  float: left;
+  position: relative;
+  width: 900px;
+  background: #141414;
+  color: #fefefe;
+}
+
+#demo_inline_element .side { float: left; }
+#demo_inline_element .movie-container {
+ width: 640px;
+ height: 360px;
+ margin-right: 10px;
+ overflow: hidden;
+}
+
+#demo_inline_element .description-container {
+ width: 249px;
+ height: 360px;
+ position: relative;
+}
+
+#demo_inline_element .description-container h1 {
+ font: normal 19px/23px "HelveticaNeue","Helvetica Neue","HelveticaNeueRoman","HelveticaNeue-Roman","Helvetica Neue Roman",Helvetica,Arial,sans-serif,Verdana;
+ text-transform: uppercase;
+ margin-bottom: 0;
+}
+#demo_inline_element .description-container h4 {
+ font: normal 11px/18px "HelveticaNeue","Helvetica Neue","HelveticaNeueRoman","HelveticaNeue-Roman","Helvetica Neue Roman",Helvetica,Arial,sans-serif,Verdana;
+ text-transform: uppercase;
+ color: #666;
+ margin-bottom: 10px;
+}
+
+#demo_inline_element .tagContainer {
+ float: left;
+ width: 100%;
+ clear: both;
+}
+#demo_inline_element .tagContainer .tag, 
+#demo_inline_element .tagContainer .tag:hover {
+    background-color: #080808;
+    background-image: url("/images/lightview/demonstrations/inline/tag_background.gif");
+    background-position: right center;
+    background-repeat: no-repeat;
+    color: #808080;
+    float: left;
+    line-height: 15px;
+    margin: 0 6px 5px 0px;
+    font-size: 8px;
+    text-transform: uppercase;
+    padding: 3px 19px 3px 5px;
+    text-decoration: none;
+    cursor: default;
+}
+
+#demo_inline_element .full {
+  float: right;
+  clear: both;
+  background: url("/images/lightview/demonstrations/inline/full_background.gif") right center no-repeat;
+  color: #808080;
+  height: 24px;
+  line-height: 24px;
+  padding: 3px 20px 3px 5px;
+  margin-bottom: 18px;
+}
+
+
+
+****/

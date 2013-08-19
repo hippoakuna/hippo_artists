@@ -1,0 +1,102 @@
+/* Base Parts
+-------------------------------------------------------------------------------------*/
+
+#header {
+  background: rgb(246,246,246);
+  border-bottom: 1px solid rgba(150,150,150,.2);
+  position:fixed;
+  top: 0; left: 0;
+  z-index: 2;
+  width:100%;
+  height: 3em;
+} 
+#content {
+  margin: 8em 0 0 4.4em; 
+  padding: 18px; padding-bottom: 3em;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-right: 1px solid rgba(150,150,150,.2); 
+  background: rgb(246,246,246); 
+  -webkit-box-shadow: 0px 0px 5px 0px #ccc;
+  -moz-box-shadow:    0px 0px 5px 0px #ccc;
+  box-shadow:         0px 0px 5px 0px #ccc;
+}
+
+/* Pods
+-------------------------------------------------------------------------------------*/
+
+  #left-sidebar ul.lg-icons li.text {
+    background: rgba(1,1,1,.2);    
+    color: rgba(255,255,255,.8);   
+  }
+  #left-sidebar ul.lg-icons li.text img {
+    opacity: .8;   
+  }
+
+  #left-sidebar ul.lg-icons li.profile {
+    border-top: 1px solid #333;
+    border-bottom: 0 none;
+    position: absolute; bottom: 10.7em; 
+  }
+
+/* Avatar
+-------------------------------------------------------------------------------------*/
+
+#content .avatar img,
+#content .avatar {
+  background: #d0d0d0;
+  height: 480px; width: 853px; /* 478 x 853 */
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-border-top-left-radius: 3px; 
+  -moz-border-top-left-radius: 3px; 
+  border-top-left-radius: 3px; 
+}
+#content .avatar p {
+  color: #666;
+  font: 12px 'Helvetica Neue', 'lato', Helvetica;
+  margin: 0; margin-top: -2px; padding: 12px;
+  background: rgba(255,255,255,.8); 
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -webkit-box-shadow: 0px 1px 3px 0px #ccc;
+  -moz-box-shadow:    0px 1px 3px 0px #ccc;
+  box-shadow:         0px 1px 3px 0px #ccc;
+}
+#content .avatar p a.like-us {color:#666;}
+
+  .avatar .notch {
+    position: absolute;
+    top: 29.5em; 
+    left: 36px;
+    margin: 0; padding: 0;
+    width: 0; height: 0;
+    border-bottom: 10px solid rgba(252,252,252,1);
+    border-left: 10px solid transparent; 
+    border-right: 10px solid transparent;   
+  }
+  .avatar .border-notch {
+    position: absolute;
+    top: 29.4em; 
+    left: 36px;
+    margin: 0; padding: 0;
+    width: 0; height: 0;
+    border-bottom: 10px solid rgba(200,200,200,.3);
+    border-left: 10px solid transparent; 
+    border-right: 10px solid transparent;   
+  }
+
+/* Content (About)
+-------------------------------------------------------------------------------------*/
+
+#content .avatar p.text-content {
+  border-top: 1px solid rgba(240,240,240,.8);
+  font-size: 14px; ;
+}
+
